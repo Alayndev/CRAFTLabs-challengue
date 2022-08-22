@@ -1,0 +1,21 @@
+<p>Texto: {{ text }}</p>
+
+<form #form>
+  <select name="option" [(ngModel)]="text">
+    <option [value]="option" *ngFor="let option of options">
+      {{ option }}
+    </option>
+  </select>
+
+  <button (click)="handleSubmit($event)" type="submit">Submit</button>
+</form>
+
+<p>{{ requestStatus }}</p>
+
+<div>
+  <h2>{{ product.price }}</h2>
+  <p>{{ product.title }}</p>
+  <p>{{ product.description }}</p>
+</div>
+
+<!-- sebastian.carreira@craftlabs.net - repo -->
